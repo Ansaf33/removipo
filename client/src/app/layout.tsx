@@ -29,9 +29,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
-          <div className="flex flex-col items-center h-screen p-24">
-            <CategoryProvider>{children}</CategoryProvider>
-          </div>
+          <CategoryProvider>
+            <div className="flex flex-col items-center h-screen p-24">
+              {children}
+            </div>
+          </CategoryProvider>
         </div>
       </body>
     </html>
